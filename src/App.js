@@ -5,17 +5,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" width={400} />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Salqus - Smart Web project.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://salqus.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Visit my Web page, which front-end part was done by me! :)
         </a>
       </header>
     </div>
