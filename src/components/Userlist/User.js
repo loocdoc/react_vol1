@@ -1,7 +1,7 @@
 import PropTypes, { string } from "prop-types";
-import { logGroup } from "../helpers/logger";
-import { formatUser, currentUser1 } from "../helpers/user";
-import { User as UserModel } from "../models/user.model"
+import { logGroup } from "../../helpers/logger";
+import { formatUser, currentUser1 } from "../../helpers/user";
+import { User as UserModel } from "../../models/user.model"
 
 
 // const currentUser = {
