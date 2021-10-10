@@ -1,5 +1,6 @@
-import { User } from "./components/User";
-import { currentUser1 } from "./helpers/user";
+import React from "react";
+
+import { Header, Footer, Content } from "./components/layout";
 
 import './App.css';
 
@@ -11,10 +12,9 @@ function App() {
 
   return (
     <div className="container">
-      <header className="box">
-        <User user={currentUser1} title="User Component title" bio />
-        <User />
-      </header>
+      <Header />
+      <Content />
+      <Footer />
     </div>
   );
 }
