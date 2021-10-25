@@ -34,7 +34,9 @@ export function EmailInput() {
                 name="email"
                 value={value}
                 autoComplete="email"
-                onChange={({ target }) => setValue(target.value)} />
+                onChange={({ target }) => setValue(target.value)}
+                required
+            />
             <span className="icon is-small is-left">
                 <i className="fas fa-envelope"></i>
             </span>

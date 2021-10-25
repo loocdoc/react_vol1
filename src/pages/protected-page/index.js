@@ -1,0 +1,2 @@
+export { ProtectedPage } from "./ProtectedPage";
+
