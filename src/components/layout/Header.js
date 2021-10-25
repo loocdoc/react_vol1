@@ -1,49 +1,54 @@
-export function Header(props) {
+import { NavLink, Link } from 'react-router-dom';
+
+import * as route from "../../constants/routes";
+
+
+export function Header() {
     return (
         <div className="columns">
             <div className="column is-full">
                 <nav className="navbar" role="navigation" aria-label="main navigation">
                     <div className="navbar-brand">
-                        <a className="navbar-item" href="https://bulma.io">
+                        <Link className="navbar-item" to={route.HOME_PATH}>
                             <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-                        </a>
+                        </Link>
 
-                        <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <Link role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" to={route.HOME_PATH}>
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
-                        </a>
+                        </Link>
                     </div>
 
                     <div id="navbarBasicExample" className="navbar-menu">
                         <div className="navbar-start">
-                            <a className="navbar-item">
+                            <NavLink className="navbar-item" to={route.HOME_PATH}>
                                 Home
-                            </a>
+                            </NavLink>
 
-                            <a className="navbar-item">
-                                Documentation
-                            </a>
+                            <NavLink className="navbar-item" to={route.DOCUMENTATION_PATH}>
+                                Protected Page
+                            </NavLink>
 
                             <div className="navbar-item has-dropdown is-hoverable">
-                                <a className="navbar-link">
+                                <NavLink className="navbar-link" to="#">
                                     More
-                                </a>
+                                </NavLink>
 
                                 <div className="navbar-dropdown">
-                                    <a className="navbar-item">
+                                    <NavLink className="navbar-item" to="#">
                                         About
-                                    </a>
-                                    <a className="navbar-item">
+                                    </NavLink>
+                                    <NavLink className="navbar-item" to="#">
                                         Jobs
-                                    </a>
-                                    <a className="navbar-item">
+                                    </NavLink>
+                                    <NavLink className="navbar-item" to="#">
                                         Contact
-                                    </a>
+                                    </NavLink>
                                     <hr className="navbar-divider" />
-                                    <a className="navbar-item">
+                                    <NavLink className="navbar-item" to="#">
                                         Report an issue
-                                    </a>
+                                    </NavLink>
                                 </div>
                             </div>
                         </div>
@@ -51,19 +56,19 @@ export function Header(props) {
                         <div className="navbar-end">
                             <div className="navbar-item">
                                 <div className="buttons">
-                                    <a className="button is-primary">
+                                    <NavLink className="button is-primary" to={route.SIGNUP_PATH}>
                                         <strong>Sign up</strong>
-                                    </a>
-                                    <a className="button is-light">
+                                    </NavLink>
+                                    <NavLink className="button is-light" to={route.LOGIN_PATH}>
                                         Log in
-                                    </a>
+                                    </NavLink>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </nav>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 
 

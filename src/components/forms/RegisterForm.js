@@ -2,7 +2,7 @@
 import { EmailInput } from "../../atoms/EmailInput";
 import { PasswordInput } from "../../atoms/PasswordInput";
 
-export const LoginForm = () => {
+export const RegisterForm = () => {
     // const [email, setEmail] = useState("");
     // const [emailError, setEmailError] = useState(false);
     // const [password, setPassword] = useState("");
@@ -37,24 +37,6 @@ export const LoginForm = () => {
             loginData[kay] = value;
         }
         console.log(loginData);
-        console.log(process.env.REACT_APP_API_URL);
-
-        fetch('${$process.env.REACT_APP_API_URL}/login', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-            },
-            body: JSON.stringify(loginData),
-        })
-            .then(res => res.json())
-            .then((result) => {
-                console.log(result);
-            })
-
-            .catch((error) => {
-                console.log(error);
-            });
     };
 
     // const getClassName = (inputType = "email") => {
@@ -84,7 +66,7 @@ export const LoginForm = () => {
     return (
         <form onSubmit={onSubmit}>
             <div className="field">
-                <EmailInput name="email" />
+                <EmailInput />
                 {/* <p className="control has-icons-left has-icons-right">
                     <input
                         className={getClassName('email')}
@@ -111,7 +93,7 @@ export const LoginForm = () => {
                 </p> */}
             </div>
             <div className="field">
-                <PasswordInput name="password" />
+                <PasswordInput />
                 {/* <p className="control has-icons-left has-icons-right">
                     <input
                         className={getClassName('password')}

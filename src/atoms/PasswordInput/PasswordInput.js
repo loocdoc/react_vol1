@@ -32,7 +32,9 @@ export function PasswordInput() {
                 name="password"
                 value={value}
                 autoComplete="new-password"
-                onChange={({ target }) => setValue(target.value)} />
+                onChange={({ target }) => setValue(target.value)}
+                required
+            />
             <span className="icon is-small is-left">
                 <i className="fas fa-lock"></i>
             </span>
